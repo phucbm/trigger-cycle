@@ -11,19 +11,25 @@ const path = require("path");
  * Sample variables: "cross-env ENTRY=web"
  * ENTRY: folder to start building the bundle
  */
-const entryFolder = 'dev';
+const entryFolder = 'site';
 const entryPath = path.resolve(__dirname, `../${entryFolder}`);
+
+
+// change the base URL depends on your deployment URL
+// domain.com or sub.domain.com => use "/"
+// domain.com/your-site => use "/your-site"
+const BASE = env.BASE || '/';
 
 module.exports = merge(server, {
     mode: 'production',
     devtool: false,
 
     // Where webpack looks to start building the bundle
-    entry: [entryPath + '/script.js'],
+    entry: [entryPath + '/index.js'],
 
     output: {
         path: paths.build,
-        publicPath: '/',
+        publicPath: BASE,
         filename: 'js/[name].[contenthash].bundle.js',
     },
     module: {
@@ -60,7 +66,7 @@ module.exports = merge(server, {
             patterns: [
                 {
                     from: paths.public,
-                    to: 'assets',
+                    to: 'public',
                     globOptions: {
                         ignore: ['*.DS_Store'],
                     },

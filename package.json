@@ -1,14 +1,14 @@
 {
-  "name": "your-project-name",
-  "outputFilename": "your-project-name",
-  "prettyName": "MyInstance - Webpack Library Boilerplate",
-  "codeName": "MyInstance",
+  "name": "trigger-cycle",
+  "outputFilename": "trigger-cycle",
+  "prettyName": "Trigger Cycle",
+  "codeName": "Trigger Cycle",
   "version": "0.0.1",
-  "description": "A boilerplate to build JavaScript library with ES6 module and UMD version.",
-  "homepage": "https://github.com/phucbm/js-webpack-boilerplate",
+  "description": "TriggerCycle is a lightweight JavaScript library for creating interval-based activation and deactivation of DOM elements.",
+  "homepage": "https://github.com/phucbm/trigger-cycle",
   "repository": {
     "type": "git",
-    "url": "git@github.com:phucbm/js-webpack-boilerplate"
+    "url": "git@github.com:phucbm/trigger-cycle"
   },
   "author": {
     "name": "phucbm",
@@ -19,11 +19,12 @@
     "javascript",
     "es6"
   ],
-  "main": "./dist/your-project-name.module.js",
+  "main": "./dist/trigger-cycle.module.js",
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.build.js",
+    "ghp-build": "cross-env BASE=/single-web-page-boilerplate/ webpack --config config/webpack.build.js",
     "prod-umd": "cross-env TARGET=umd webpack --config config/webpack.prod.js",
     "prod-umd-min": "cross-env TARGET=umd MIN=yes webpack --config config/webpack.prod.js",
     "prod-module": "cross-env TARGET=module MIN=yes webpack --config config/webpack.prod.js",
