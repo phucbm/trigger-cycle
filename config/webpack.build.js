@@ -11,7 +11,7 @@ const path = require("path");
  * Sample variables: "cross-env ENTRY=web"
  * ENTRY: folder to start building the bundle
  */
-const entryFolder = 'site';
+const entryFolder = 'dev';
 const entryPath = path.resolve(__dirname, `../${entryFolder}`);
 
 
@@ -25,7 +25,7 @@ module.exports = merge(server, {
     devtool: false,
 
     // Where webpack looks to start building the bundle
-    entry: [entryPath + '/index.js'],
+    entry: [entryPath + '/script.js'],
 
     output: {
         path: paths.build,
