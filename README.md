@@ -1,4 +1,6 @@
-### TriggerCycle.js
+<img src="https://github.com/phucbm/trigger-cycle/assets/14942380/9c8744a3-0c47-460e-8635-3c0622401401" width=100>
+
+# TriggerCycle.js
 
 **TriggerCycle** is a lightweight JavaScript library for creating interval-based activation and deactivation of DOM elements. It offers extensive customization options and event callbacks for visibility, progress, and breakpoints, making it perfect for creating dynamic and interactive web experiences.
 
